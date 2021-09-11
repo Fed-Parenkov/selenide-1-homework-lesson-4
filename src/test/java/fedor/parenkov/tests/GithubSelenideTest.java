@@ -15,7 +15,7 @@ public class GithubSelenideTest {
     }
 
     @Test
-    void RegFormTest() {
+    void SelenideRepoTest() {
 
         // ACTION: открыть страницу проекта Selenide на github.com
         open("https://github.com/");
