@@ -19,8 +19,6 @@ public class DragAndDrop {
 
         // ACTION: перетащить квадрат A на квадрат B
         open("https://the-internet.herokuapp.com/drag_and_drop");
-
-        // этот вариант рабочий:
         $("#column-a").dragAndDropTo($("#column-b"));
 
         // CHECK: квадраты поменялись
