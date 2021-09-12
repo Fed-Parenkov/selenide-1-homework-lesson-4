@@ -26,7 +26,9 @@ public class DragAndDrop {
         $("#column-b").shouldHave(text("A"));
 
 
-        // это всё не работает :(
+        // с помощью actions() не работает :(
+
+        // тут с помощью метода getLocation(), взятого из Selenium, определял координаты квадратов:
 //        Point a = $("#column-a").getLocation();
 //        System.out.println(a);
 //        Point b = $("#column-b").getLocation();
