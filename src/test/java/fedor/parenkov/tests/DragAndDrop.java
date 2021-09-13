@@ -28,12 +28,8 @@ public class DragAndDrop {
 
         // с помощью actions() не работает :( Пробовал такие варианты:
 
-        // с помощью метода getLocation(), взятого из Selenium, определял координаты квадратов:
-//        Point a = $("#column-a").getLocation();
-//        System.out.println(a);
-//        Point b = $("#column-b").getLocation();
-//        System.out.println(b);
 //        actions().moveByOffset(475, 87).clickAndHold().moveByOffset(690, 87).release().perform();
+//        actions().moveByOffset(315, 87).clickAndHold().moveByOffset(530, 87).release().perform();
 //
 //        actions().moveToElement($("#column-a")).clickAndHold().moveToElement($("#column-b")).release().perform();
 //
