@@ -20,25 +20,19 @@ public class GithubSelenideTest {
         // ACTION: открыть страницу проекта Selenide на github.com
         open("https://github.com/");
         $("[data-scoped-placeholder=Search]").setValue("selenide").pressEnter();
-        $$(".repo-list li").first().$("a").click();
-
-        // CHECK: открыта страница проекта Selenide
-        $(".author").shouldHave(text("selenide"));
+        $(".repo-list a").click();
 
         // ACTION: перейти в раздел "Wiki" проекта
         $("#wiki-tab").click();
 
-        // CHECK: открыта страница "Wiki" проекта Selenide
-        $("#wiki-body").$("h1").shouldHave(text("Welcome to the selenide wiki!"));
+        // ACTION: раскрыть список Pages полностью
+        $("#wiki-pages-box button").click();
 
-        // CHECK: в списке страниц есть ссылка на страницу "Soft Assertions"
-        $(".markdown-body ul").shouldHave(text("Soft Assertions"));
+        // CHECK: в списке Pages есть страница "SoftAssertions"
+        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
 
-        // ACTION: перейти на страницу "Soft Assertions"
-        $(".markdown-body ul").$(byText("Soft assertions")).click();
-
-        // CHECK: открыта страница "Soft Assertions"
-        $("#wiki-wrapper").shouldHave(text("SoftAssertions"));
+        // ACTION: перейти на страницу "SoftAssertions"
+        $("#wiki-pages-box ul").$(byText("SoftAssertions")).click();
 
         // CHECK: на странице есть текст "Using JUnit5"
         $(".markdown-body").shouldHave(text("Using JUnit5"));
