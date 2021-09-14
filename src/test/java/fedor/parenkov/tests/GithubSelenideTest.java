@@ -28,9 +28,6 @@ public class GithubSelenideTest {
         // ACTION: раскрыть список Pages полностью
         $("#wiki-pages-box button").click();
 
-        // CHECK: в списке Pages есть страница "SoftAssertions"
-        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
-
         // ACTION: перейти на страницу "SoftAssertions"
         $("#wiki-pages-box ul").$(byText("SoftAssertions")).click();
 
